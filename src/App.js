@@ -13,12 +13,11 @@ function App() {
         setGeo_data(response.data)
         console.log(response.data)
       })
-      
       setLocation('')
 
     }
   }
- 
+  
   return (
     <div className='container'>
       <div className='header'>
@@ -32,8 +31,22 @@ function App() {
       <div className='main'>
           {geo_data ? <p className='location'>{geo_data.name}</p>: null}
           {geo_data.main ? <p className='temp'>{geo_data.main.temp.toFixed()}°C</p> : null}
+        <div className='side-text'>
+          {geo_data.weather ? <p className=''>{geo_data.weather[0].main}</p>: null}
+        </div>
       </div>
-      <div className='footer'></div>
+      <div className='footer'>
+        <div className='text'>
+          <p>Feels like</p>
+          <p>Minimal temperature</p>
+          <p>Maximal temperature</p>
+        </div>
+        <div className='text'>
+          {geo_data.main ? <p className='temp-2 temp-center'>{geo_data.main.feels_like.toFixed()}°C</p>: null}
+          {geo_data.main ? <p className='temp-2 temp-center'>{geo_data.main.temp_min.toFixed()}°C</p>: null}
+          {geo_data.main ? <p className='temp-2'>{geo_data.main.temp_max.toFixed()}°C</p>: null}
+        </div>
+      </div>
     </div>
   );
 }

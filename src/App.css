@@ -31,6 +31,7 @@
 }
 .main{
   padding-left: 400px;
+  height: 450px;
 }
 .location{
   font-size: 50px;
@@ -38,4 +39,34 @@
 .temp{
   margin-top: -20px;
   font-size: 150px;
+}
+.footer{
+  background-color: black;
+  opacity: 0.6;
+  width: 50%;
+ height: 15%;
+ margin: auto;
+}
+.footer>p{
+  padding: 10px;
+  font-size: large;
+}
+.text{
+  display: flex;
+  justify-content: space-around;
+}
+.temp-2{
+  font-size: 50px;
+  margin-top: -10px;
+}
+.temp-center{
+  margin-left: -40px;
+}
+.side-text{
+  font-size: 100px;
+  transform: rotate(-0.75turn);
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 150px;
 }

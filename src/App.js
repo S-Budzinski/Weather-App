@@ -30,8 +30,8 @@ function App() {
         />
       </div>
       <div className='main'>
-          <p className='location'>{geo_data.name}</p>
-          <p className='temp'>{geo_data.main.temp.toFixed()}°C</p>
+          {geo_data ? <p className='location'>{geo_data.name}</p>: null}
+          {geo_data.main ? <p className='temp'>{geo_data.main.temp.toFixed()}°C</p> : null}
       </div>
       <div className='footer'></div>
     </div>
